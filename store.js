@@ -22,13 +22,18 @@ export default fireapp;
 
 // ステート初期値
 const initial = {
+  login:false,
+  username:'(click here!)',
+  email:'',
+  data:[],
+  items:[]
 }
-
 
 // レデューサー
 function fireReducer (state = initial, action) {
   switch (action.type) {
-    case 'TESTACTION':
+    case 'UPDATE_USER':
+      return action.value;
     default:
       return state;
   }
